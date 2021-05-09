@@ -39,7 +39,7 @@ Note the container id of the Python consumer container (from the image `python:3
 
 Then run the following command:
 
-`docker logs <noted-container-ID> --follow`
+`docker logs <noted-container-id> --follow`
 
 Send a GET request to `http://localhost:8080/v1/api/person`
 
