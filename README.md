@@ -35,7 +35,7 @@ Run the command to list active containers:
 
 `docker ps`
 
-Note the container ID of the kafka-consumer-py container (from image python:3)
+Note the container id of the Python consumer container (from the image `python:3`)
 
 Then run the following command:
 
