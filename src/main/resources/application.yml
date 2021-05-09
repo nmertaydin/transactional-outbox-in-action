@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: &dbURL jdbc:mysql://localhost:13306/appdb
+    username: &dbUser root
+    password: &dbPassword 123456
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update

@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS outbox(
+    uuid CHAR(36) PRIMARY KEY,
+    aggregate_id BIGINT NOT NULL,
+    event_type VARCHAR(255) NOT NULL,
+    payload TEXT NOT NULL,
+    created_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)  ENGINE=INNODB;
