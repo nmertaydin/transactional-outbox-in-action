@@ -65,6 +65,6 @@ Send a PUT request to `http://localhost:8080/v1/api/person/2` with a request bod
 
 This will update an existing person.
 
-Observe the message Python consumer consumes from Kafka.
+Observe the message Python consumer consumes from Kafka queue.
 
 
