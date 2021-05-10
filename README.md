@@ -2,6 +2,9 @@
 
 This is a PoC I prepared to demonstrate the [transactional outbox](https://microservices.io/patterns/data/transactional-outbox.html) pattern / approach.
 
+[Here](https://mert.codes/no-tears-please-its-a-waste-of-good-suffering-transactional-outbox-in-action-faa3238d0122) is my post about this PoC.
+
+
 ### The Ingredients
 
 - Registration system / service (adds, updates people)
@@ -35,7 +38,7 @@ Run the command to list active containers:
 
 `docker ps`
 
-Note the container id of the Python consumer container (from the image `python:3`)
+Note the container id of the Python consumer container (that is spawned using the image `python:3`)
 
 Then run the following command:
 
@@ -54,8 +57,6 @@ Send a POST request to `http://localhost:8080/v1/api/person` with a request body
 
 This will add a new person.
 
-Observe the message Python consumer consumes from Kafka.
-
 Send a PUT request to `http://localhost:8080/v1/api/person/2` with a request body (raw, JSON) like:
 
 `{
@@ -65,6 +66,6 @@ Send a PUT request to `http://localhost:8080/v1/api/person/2` with a request bod
 
 This will update an existing person.
 
-Observe the message Python consumer consumes from Kafka.
+Observe the message Python consumer consumes from Kafka, it will print the detected changes on the terminal.
 
 
